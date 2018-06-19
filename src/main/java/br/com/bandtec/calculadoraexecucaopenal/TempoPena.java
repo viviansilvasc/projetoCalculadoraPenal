@@ -1,9 +1,9 @@
 package br.com.bandtec.calculadoraexecucaopenal;
 
 public class TempoPena {
-    int dias;
-    int meses;
-    int anos;
+    private int dias;
+    private int meses;
+    private int anos;
 
     public TempoPena(int dias, int meses, int anos) {
         this.dias = dias;

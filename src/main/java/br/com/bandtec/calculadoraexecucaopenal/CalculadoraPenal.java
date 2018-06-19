@@ -50,9 +50,11 @@ public class CalculadoraPenal {
     //quantos dias pode abater a partir de dias estudados
     public TempoPena calculaTempoPena(TempoPena pena, TempoPena prisaoTemp){
         
-        TempoPena tempoCalculado = new TempoPena(pena.dias,pena.meses,pena.anos);
-        tempoCalculado.anos = pena.anos - prisaoTemp.anos;
+        TempoPena tempoCalculado = new TempoPena(pena.getDias(),pena.getMeses(),pena.getAnos());
         
+        tempoCalculado.setAnos(pena.getAnos() - prisaoTemp.getAnos());
+        tempoCalculado.setMeses(pena.getMeses() - prisaoTemp.getMeses());
+        tempoCalculado.setDias(pena.getDias() - prisaoTemp.getDias());
        
         return tempoCalculado;
     }
